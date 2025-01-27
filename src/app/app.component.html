@@ -14,7 +14,16 @@
           Complete
         </button>
         <span [ngClass]="{ completed: todo.completed }">
-          {{ todo.task }} ({{ todo.duration }} hr)
+          {{ todo.task }} ({{ todo.duration | number : "1.0-2" }} hr)
+          <span *ngIf="todo.priority === 'Low'" class="downArrow"
+            >&darr; {{ todo.priority }}</span
+          >
+          <span *ngIf="todo.priority === 'High'" class="upArrow"
+            >&uarr;{{ todo.priority }}</span
+          >
+          <span *ngIf="todo.priority === 'Normal'" class="noPriority">{{
+            todo.priority
+          }}</span>
         </span>
         <button class="deleteBtn" (click)="onDelete(i)">X</button>
       </ol>

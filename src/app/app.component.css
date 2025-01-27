@@ -56,3 +56,21 @@ span {
   text-decoration: line-through;
   padding-right: 20px;
 }
+
+.upArrow {
+  color: #dc143c;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.downArrow {
+  color: #b8860b;
+  font-weight: 200;
+  font-size: 25px;
+}
+
+.noPriority {
+  color: #5ff04c;
+  font-weight: 200;
+  font-size: 25px;
+}
